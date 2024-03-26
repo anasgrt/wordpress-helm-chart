@@ -4,9 +4,7 @@ kind: Deployment
 metadata:
   name: wordpress
 spec:
-{{- if $wordpress.replicas }}
   replicas: {{ .Values.wordpress.replicas }}
-{{- end }}
   selector:
     matchLabels:
       app: wordpress
