@@ -62,17 +62,3 @@ mysqlPVC:
   accessModes: ReadWriteOnce
   storageClassName: mysql
 
-ingress:
-  enabled: true
-  annotations:
-    nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
-  rules:
-    - host: kube1.playground.kabisa.io
-      paths:
-        - path: /wordpress(/|$)(.*)
-          backendServiceName: wordpress-service
-          backendServicePort: 80
-        - path: /dbadmin(/|$)(.*)
-          backendServiceName: phpmyadmin-service
-          backendServicePort: 80
