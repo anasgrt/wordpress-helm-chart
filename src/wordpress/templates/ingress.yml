@@ -13,7 +13,7 @@ spec:
       port:
         number: 80
   rules:
-  - host: anas-alHamd-nl-rg3.maxtld.dev
+  - host: anas-alhamd-nl-rg3.maxtld.dev
     http:
       paths:
       - path: /dbadmin
@@ -25,5 +25,5 @@ spec:
               number: 80
   tls:
   - hosts:
-    - anas-alHamd-nl-rg3.maxtld.dev
+    - anas-alhamd-nl-rg3.maxtld.dev
     secretName: letsencrypt-nginx
